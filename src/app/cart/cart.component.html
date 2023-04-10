@@ -13,7 +13,7 @@
   <button type="button" (click)="clearCart()">Clear Cart</button>
 </p>
 
-<form [formGroup]="checkoutForm">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="name"> Name </label>
     <input id="name" type="text" formControlName="name" />
@@ -23,5 +23,5 @@
     <label for="address">Address</label>
     <input name="address" type="text" formControlAddress="address" />
   </div>
-  <button class="button" type="submit" (ngSubmit)="onSubmit()">purchase</button>
+  <button class="button" type="submit">purchase</button>
 </form>
