@@ -12,3 +12,16 @@
 <p *ngIf="items.length > 0">
   <button type="button" (click)="clearCart()">Clear Cart</button>
 </p>
+
+<form [formGroup]="checkoutForm">
+  <div>
+    <label for="name"> Name </label>
+    <input id="name" type="text" formControlName="name" />
+  </div>
+
+  <div>
+    <label for="address">Address</label>
+    <input name="address" type="text" formControlAddress="address" />
+  </div>
+  <button class="button" type="submit" (ngSubmit)="onSubmit()">purchase</button>
+</form>
